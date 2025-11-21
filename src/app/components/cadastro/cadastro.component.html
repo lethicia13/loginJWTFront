@@ -1,34 +1,47 @@
 <body>
-    <div class="container">
-        <h1>Criar Novo Usuário</h1>
-        <form action="#" method="POST" class="user-form">
-            <input type="hidden" id="id" name="id" value="">
+  <div class="container">
+    <h1>Criar Novo Usuário</h1>
+    <form action="#" method="POST" class="user-form">
+      <input type="hidden" id="id" name="id" value="" />
 
-            <div class="form-group">
-                <label for="username">Nome de Usuário</label>
-                <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário" required>
-            </div>
+      <div class="form-group">
+        <label for="username">Nome de Usuário</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Digite seu nome de usuário"
+          required
+        />
+      </div>
 
-            <div class="form-group">
-                <label for="password">Senha</label>
-                <input type="password" id="password" name="password" placeholder="Crie uma senha forte" required>
-            </div>
+      <div class="form-group">
+        <label for="password">Senha</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Crie uma senha forte"
+          required
+        />
+      </div>
 
-            <div class="form-group">
-                <label for="role">Função de Acesso (Role)</label>
-                <select id="role" name="role" required>
-                    <option value="" disabled selected>Escolha o nível de acesso</option>
-                    <option value="ADMIN">Administrador</option>
-                    <option value="USER">Usuário Padrão</option>
-                    <option value="GUEST">Convidado</option>
-                </select>
-            </div>
+      <div class="form-group">
+        <label for="role">Função de Acesso (Role)</label>
+        <select id="role" name="role" required>
+          <option value="" disabled selected>Escolha o nível de acesso</option>
+          <option value="ADMIN">Administrador</option>
+          <option value="USER">Usuário Padrão</option>
+          <option value="GUEST">Convidado</option>
+        </select>
+      </div>
 
-            <div class="btn-group">
-                <button type="submit" class="submit-btn">Cadastrar Usuário</button>
-                <a href="/login" class="secondary-btn">Login</a>
-            </div>
-            
+      <div class="btn-group">
+        <form (ngSubmit)="cadastrar()" class="user-form">
+          <button type="submit" class="submit-btn">Cadastrar Usuário</button>
         </form>
-    </div>
+        <a href="/login" class="secondary-btn">Login</a>
+      </div>
+    </form>
+  </div>
 </body>
